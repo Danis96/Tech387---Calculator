@@ -53,16 +53,16 @@ body {
     padding: 0 14px;
 }
 
-.mat-form-field-appearance-legacy .mat-form-field-underline {
+/* .mat-form-field-appearance-legacy .mat-form-field-underline {
     background-color: white;
-}
+} */
 
 .mat-form-field-appearance-legacy .mat-form-field-label {
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 .mat-focused .mat-form-field-appearance-legacy .mat-form-field-underline {
-    background-color: white;
+    background-color: rgb(0, 0, 0);
 }
 
 .mat-input-element {
@@ -88,6 +88,21 @@ body {
     display: none;
 }
 
+/* .mat-step-header .mat-step-icon {
+    background-color: #e6ecf1;
+} */
+
+/* .mat-step-header .mat-step-icon-selected,
+.mat-step-header .mat-step-icon-state-done,
+.mat-step-header .mat-step-icon-state-edit.mat-horizontal-stepper-header .mat-step-icon {
+    background-color: rgba(0, 200, 83, 0.4);
+} */
+
+/* .mat-step-header .mat-step-icon-selected {
+    background-color: rgb(0, 200, 83);
+    margin-right: 0px;
+} */
+
 .mat-form-field-appearance-legacy .mat-form-field-infix {
     padding: .4375em 0;
     padding-bottom: 0;
@@ -95,12 +110,12 @@ body {
 
 input.mat-input-element {
     margin-top: -0.0625em;
-    color: white;
+    color: black;
 }
 
 .mat-form-field.mat-form-field-invalid .mat-form-field-ripple,
 .mat-form-field.mat-form-field-invalid .mat-form-field-ripple.mat-accent {
-    background-color: white;
+    background-color: black;
 }
 
 .mat-stepper-horizontal-line {
