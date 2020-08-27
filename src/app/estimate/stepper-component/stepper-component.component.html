@@ -42,7 +42,7 @@
 </mat-horizontal-stepper>
 
 <div class="buttons-container">
-  <button *ngIf="num > 0" class="button previous" mat-button (click)="goBack(stepper)">Back</button>
+  <button *ngIf="num > 0" class="previous color" mat-button (click)="goBack(stepper)">Back</button>
   <button *ngIf="num !== fetchedJson.pages.length -1 " class="button next" [disabled]="buttonState()" mat-button
     (click)="goForward(stepper)">Next</button>
   <button [class.spinner]="btnLoading" [disabled]="!nameValidation.valid || !emailReg.valid" *ngIf=" num === fetchedJson.pages.length - 1 " class="button"
