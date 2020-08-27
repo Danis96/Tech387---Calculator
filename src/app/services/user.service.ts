@@ -16,7 +16,7 @@ export class UsersService {
     getUsersAnswers(answer: any, time: number, price: number, name: string, email: string ) {
         const userAnswer = {
             answer: answer,
-            estimatedTime: time,
+            estimatedTime: Math.floor(time),
             estimatedPrice: price,
             usersName: name,
             usersEmail: email,
