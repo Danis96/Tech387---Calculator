@@ -86,54 +86,32 @@ export class StepperComponentComponent implements OnInit, OnDestroy {
   }
 
   emptyFun() {
-    console.log("Empty");
+
+    console.log('Empty');
   }
 
-  getTimeAndPrice(
-    event,
-    price: number,
-    time: number,
-    radio: boolean,
-    num: number,
-    pages: any,
-    answer: any,
-    chosen: boolean,
-    pageID: number,
-    i: number,
-    page: any,
-    questionName: string,
-    coefficient: number
-  ) {
-    /// function for disabling other choices if one is checked
-    /// in radio === true objects
-    if (radio) {
-      pages.forEach((x) => {
-        if (x.id !== page.id) {
-          x.disabled = !x.disabled;
-        }
-      });
-    }
-    console.log(coefficient);
-    this.addAnswersIfTheyAreChosen(chosen, answer, pageID, questionName);
-    this.estimateService.sendEstimatedTimeAndPrice(
-      event,
-      price,
-      time,
-      radio,
-      num,
-      pageID,
-      pages,
-      i,
-      coefficient
-    );
+  getTimeAndPrice(event, price: number, time: number, radio: boolean, num: number, pages:any, answer: any, chosen: boolean, pageID: number, i: number, page: any, questionName: string, coefficient: number) {
+       /// function for disabling other choices if one is checked
+      /// in radio === true objects
+       if(radio) {
+         pages.forEach(x => {
+           if (x.id !== page.id) {
+             x.disabled = !x.disabled
+           }
+         });
+       }
+       console.log(coefficient);
+      this.addAnswersIfTheyAreChosen(chosen, answer, pageID, questionName);
+      this.estimateService.sendEstimatedTimeAndPrice(event, price, time, radio, num, pageID, pages, i, coefficient);
   }
+getBlack(){
+  return 'black';
+}
 
-  addAnswersIfTheyAreChosen(
-    chosen: boolean,
-    answer: any,
-    pageID: number,
-    questionName: string
-  ) {
+ 
+
+  addAnswersIfTheyAreChosen(chosen: boolean, answer: any, pageID: number, questionName: string) {
+
     /// collect selected answers
     /// if answer is chosen then add it to [this,userAnswer]
     /// else
